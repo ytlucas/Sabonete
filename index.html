@@ -12,22 +12,25 @@
 
   <!-- Meta Pixel Code -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1686699665747159');
-  fbq('track', 'PageView');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1686699665747159');
+    fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1686699665747159&ev=PageView&noscript=1"
-  /></noscript>
+      src="https://www.facebook.com/tr?id=1686699665747159&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
 </head>
+
 <body>
 
   <!-- Fixed Timer Bar -->
@@ -83,7 +86,7 @@
     <div class="container bio-wrapper">
       <img src="/fotoProfissional.png" alt="Beatriz" class="bio-img">
       <div class="bio-text">
-        <p style="font-style: italic; color: var(--text-light); margin-bottom: 5px;">Oi, eu sou a Beatriz!</p>
+        <p style="font-style: italic; color: var(--text-light); margin-bottom: 5px;">Oi, eu sou a Roberta!</p>
         <h2>Eu não ensino mulheres a fazer sabonetes.</h2>
         <h2 class="highlight">Eu ensino mulheres comuns a transformar uma mesa da cozinha em uma fonte de renda.</h2>
         <p>Eu já fui como você: cheia de sonhos, com pouco dinheiro, muito para fazer e cansada de depender do salário
@@ -163,6 +166,24 @@
             <li>Consegue clientes e vendas recorrentes</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resultados Section -->
+  <section class="resultados">
+    <div class="container text-center">
+      <h2 class="section-title" style="font-size: 1.8rem;">VEJA OS LINDOS SABONETES QUE NOSSAS ALUNAS ESTÃO PRODUZINDO
+      </h2>
+      <div class="grid-resultados">
+        <img src="/resultado1.jpg" alt="Resultado de Aluna" class="resultado-img">
+        <img src="/resultado2.jpg" alt="Resultado de Aluna" class="resultado-img">
+        <img src="/resultado3.jpg" alt="Resultado de Aluna" class="resultado-img">
+        <img src="/resultado4.jpg" alt="Resultado de Aluna" class="resultado-img">
+        <img src="/resultado5.jpg" alt="Resultado de Aluna" class="resultado-img">
+      </div>
+      <div class="btn-wrapper mt-4">
+        <a href="https://pay.cakto.com.br/gaf8s6z_922599" class="btn">QUERO PRODUZIR SABONETES ASSIM</a>
       </div>
     </div>
   </section>
@@ -397,6 +418,26 @@
     window.onload = function () {
       let tenMinutes = 60 * 10;
       startTimer(tenMinutes);
+      
+      // Auto-scroll logic for mobile carousel
+      const carousel = document.querySelector('.grid-resultados');
+      if (carousel) {
+        setInterval(() => {
+          if (window.innerWidth <= 768) {
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            let newScroll = carousel.scrollLeft + (carousel.clientWidth * 0.85);
+            
+            if (newScroll >= maxScroll - 10) {
+              newScroll = 0;
+            }
+            
+            carousel.scrollTo({
+              left: newScroll,
+              behavior: 'smooth'
+            });
+          }
+        }, 3000);
+      }
     };
 
     // Sales Notification Logic
