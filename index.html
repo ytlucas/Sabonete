@@ -15,7 +15,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -75,7 +75,7 @@
 
       <div class="hero-image-col">
         <div class="float-badge-1">Transforme sua cozinha em uma fonte de renda!</div>
-        <img src="/fotoProfissional.png" alt="Profissional" class="hero-img">
+        <img src="/fotoProfissional.png" alt="Profissional" class="hero-img" fetchpriority="high" decoding="async">
         <div class="float-badge-2">FEITO A MÃO<br>COM AMOR<br>❤️</div>
       </div>
     </div>
@@ -84,7 +84,7 @@
   <!-- Bio Section -->
   <section class="bio">
     <div class="container bio-wrapper">
-      <img src="/fotoProfissional.png" alt="Beatriz" class="bio-img">
+      <img src="/fotoProfissional.png" alt="Beatriz" class="bio-img" loading="lazy" decoding="async">
       <div class="bio-text">
         <p style="font-style: italic; color: var(--text-light); margin-bottom: 5px;">Oi, eu sou a Roberta!</p>
         <h2>Eu não ensino mulheres a fazer sabonetes.</h2>
@@ -176,11 +176,11 @@
       <h2 class="section-title" style="font-size: 1.8rem;">VEJA OS LINDOS SABONETES QUE NOSSAS ALUNAS ESTÃO PRODUZINDO
       </h2>
       <div class="grid-resultados">
-        <img src="/resultado1.jpg" alt="Resultado de Aluna" class="resultado-img">
-        <img src="/resultado2.jpg" alt="Resultado de Aluna" class="resultado-img">
-        <img src="/resultado3.jpg" alt="Resultado de Aluna" class="resultado-img">
-        <img src="/resultado4.jpg" alt="Resultado de Aluna" class="resultado-img">
-        <img src="/resultado5.jpg" alt="Resultado de Aluna" class="resultado-img">
+        <img src="/resultado1.jpg" alt="Resultado de Aluna" class="resultado-img" loading="lazy" decoding="async">
+        <img src="/resultado2.jpg" alt="Resultado de Aluna" class="resultado-img" loading="lazy" decoding="async">
+        <img src="/resultado3.jpg" alt="Resultado de Aluna" class="resultado-img" loading="lazy" decoding="async">
+        <img src="/resultado4.jpg" alt="Resultado de Aluna" class="resultado-img" loading="lazy" decoding="async">
+        <img src="/resultado5.jpg" alt="Resultado de Aluna" class="resultado-img" loading="lazy" decoding="async">
       </div>
       <div class="btn-wrapper mt-4">
         <a href="https://pay.cakto.com.br/gaf8s6z_922599" class="btn">QUERO PRODUZIR SABONETES ASSIM</a>
@@ -194,28 +194,28 @@
       <h2 class="section-title" style="font-size: 1.8rem;">MULHERES COMUNS JÁ ESTÃO FAZENDO SUAS PRIMEIRAS VENDAS</h2>
       <div class="grid-test">
         <div class="card-test">
-          <img src="/cliente1.png" alt="Cliente 1" class="test-img">
+          <img src="/cliente1.png" alt="Cliente 1" class="test-img" loading="lazy" decoding="async">
           <p class="msg">"Achei que ninguém compraria. Quando recebi as primeiras mensagens perguntando valores, percebi
             que eu estava muito mais perto da minha independência financeira do que imaginava."</p>
           <div class="pix">+ R$ 250,00</div>
           <div class="author">Juliana, 34 anos<br>São Paulo - SP</div>
         </div>
         <div class="card-test">
-          <img src="/cliente2.png" alt="Cliente 2" class="test-img">
+          <img src="/cliente2.png" alt="Cliente 2" class="test-img" loading="lazy" decoding="async">
           <p class="msg">"Depois de anos dependendo apenas do salário do marido, receber meu primeiro dinheiro com os
             sabonetes me fez sentir capaz novamente."</p>
           <div class="pix">+ R$ 170,00</div>
           <div class="author">Renata, 41 anos<br>Curitiba - PR</div>
         </div>
         <div class="card-test">
-          <img src="/cliente3.png" alt="Cliente 3" class="test-img">
+          <img src="/cliente3.png" alt="Cliente 3" class="test-img" loading="lazy" decoding="async">
           <p class="msg">"O dinheiro ajuda, mas o que mais mudou foi minha autoestima. Saber que consigo vender algo
             produzido por mim mesma não tem comparação."</p>
           <div class="pix">+ R$ 85,00</div>
           <div class="author">Fernanda, 38 anos<br>Goiânia - GO</div>
         </div>
         <div class="card-test">
-          <img src="/cliente4.png" alt="Cliente 4" class="test-img">
+          <img src="/cliente4.png" alt="Cliente 4" class="test-img" loading="lazy" decoding="async">
           <p class="msg">"Na Verdade comecei só para tentar uma renda extra. Hoje já tenho clientes que voltam para
             comprar novamente e isso me dá muita confiança."</p>
           <div class="pix">+ R$ 420,00</div>
@@ -226,6 +226,22 @@
         renda.</p>
       <div class="btn-wrapper mt-4">
         <a href="https://pay.cakto.com.br/gaf8s6z_922599" class="btn">QUERO SER A PRÓXIMA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Provas Sociais Section -->
+  <section class="provas-sociais" style="background-color: var(--bg-cream); padding-top: 20px;">
+    <div class="container text-center">
+      <h2 class="section-title" style="font-size: 1.8rem;">MAIS RESULTADOS DE NOSSAS ALUNAS</h2>
+      <div class="grid-resultados" style="align-items: start;">
+        <img src="/prova1.jpg" alt="Prova Social 1" class="resultado-img"
+          style="height: auto; max-height: 500px; object-fit: contain;" loading="lazy" decoding="async">
+        <img src="/prova3.jpg" alt="Prova Social 2" class="resultado-img"
+          style="height: auto; max-height: 500px; object-fit: contain;" loading="lazy" decoding="async">
+      </div>
+      <div class="btn-wrapper mt-4">
+        <a href="https://pay.cakto.com.br/gaf8s6z_922599" class="btn">QUERO TER ESSES RESULTADOS</a>
       </div>
     </div>
   </section>
@@ -338,8 +354,7 @@
         <div class="offer-right">
           <div class="de">De R$ 97,00</div>
           <div class="font-bold">Por apenas</div>
-          <div class="price">R$ 27,00</div>
-          <div class="ou">ou 2x de R$ 13,50</div>
+          <div class="price">R$ 19,90</div>
           <div class="timer-banner" style="width: 100%; margin-top: 15px; font-size: 0.9rem;">
             ⏳ ÚLTIMAS VAGAS COM DESCONTO: <span class="time">10:00</span>
           </div>
@@ -385,7 +400,7 @@
   <!-- Sales Notification -->
   <div id="sales-notification" class="sales-notification">
     <div class="sn-img">
-      <img src="" id="sn-avatar" alt="Avatar">
+      <img src="" id="sn-avatar" alt="Avatar" loading="lazy" decoding="async">
     </div>
     <div class="sn-content">
       <p><span id="sn-name" class="font-bold">Ana</span> acabou de comprar o <br><strong>Método Sabonete
@@ -418,7 +433,7 @@
     window.onload = function () {
       let tenMinutes = 60 * 10;
       startTimer(tenMinutes);
-      
+
       // Auto-scroll logic for mobile carousel
       const carousel = document.querySelector('.grid-resultados');
       if (carousel) {
@@ -426,11 +441,11 @@
           if (window.innerWidth <= 768) {
             const maxScroll = carousel.scrollWidth - carousel.clientWidth;
             let newScroll = carousel.scrollLeft + (carousel.clientWidth * 0.85);
-            
+
             if (newScroll >= maxScroll - 10) {
               newScroll = 0;
             }
-            
+
             carousel.scrollTo({
               left: newScroll,
               behavior: 'smooth'
